@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1317555299}
-  smoothing: 3
+  smoothing: 5
   offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &484048772
 PrefabInstance:
@@ -828,6 +828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1029064415}
   - component: {fileID: 1029064416}
+  - component: {fileID: 1029064417}
   m_Layer: 0
   m_Name: masjid1
   m_TagString: Untagged
@@ -900,6 +901,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1029064417
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029064414}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 29.784143, y: 27.37}
+    newSize: {x: 29.784143, y: 27.37}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 29.784143, y: 27.37}
+  m_EdgeRadius: 0
 --- !u!1 &1042188287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,9 +1417,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 859747316}
-  jumpHeight: 400
+  jumpHeight: 425
   sandalTip: {fileID: 713122694}
   bullet: {fileID: 7513662894830086282, guid: a766a03a656617e48b3515d3996c73f9, type: 3}
+  fireRate: 0.5
 --- !u!1 &1406706242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,7 +1991,7 @@ GameObject:
   - component: {fileID: 2095561528}
   - component: {fileID: 2095561527}
   - component: {fileID: 2095561529}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: house1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

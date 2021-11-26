@@ -9,7 +9,6 @@ public class bilalController : MonoBehaviour
 
     //jumping variables
     bool grounded = false;
-    bool shooted = false;
     float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -18,8 +17,11 @@ public class bilalController : MonoBehaviour
     //for shooting
     public Transform sandalTip;
     public GameObject bullet;
-    float fireRate = 0.5f;
+    public float fireRate;
     float nextFire = 0f;
+
+    //for animation character shooting
+    bool shooted;
 
     Rigidbody2D myRB;
     Animator myAnim;
@@ -32,6 +34,7 @@ public class bilalController : MonoBehaviour
         myAnim = GetComponent<Animator>();
 
         facingRight = true;
+        shooted = false;
     }
 
     // Update is called once per frame
@@ -41,8 +44,6 @@ public class bilalController : MonoBehaviour
             myAnim.SetBool("isGrounded",grounded);
             myRB.AddForce(new Vector2(0,jumpHeight));
         }
-
-        
     }
 
 
@@ -68,10 +69,6 @@ public class bilalController : MonoBehaviour
         //player shooting
         if(Input.GetAxisRaw("Fire1")>0) {
             fireSandal();
-            swapFire(); //turn on off animation
-            myAnim.SetBool("isShoted",shooted); //Player shooting animation
-        }else if(Input.GetAxisRaw("Fire1")<0) {
-            swapFire(); //turn on off animation
             myAnim.SetBool("isShoted",shooted); //Player shooting animation
         }
     }
@@ -87,15 +84,14 @@ public class bilalController : MonoBehaviour
     void fireSandal() {
         if(Time.time > nextFire) {
             nextFire = Time.time+fireRate;
+            shooted = true;
             if(facingRight) {
                 Instantiate(bullet, sandalTip.position, Quaternion.Euler (new Vector3 (0,0,0)));
             }else if(!facingRight) {
                 Instantiate(bullet, sandalTip.position, Quaternion.Euler (new Vector3 (0,0,180f)));
             }
+        }else{
+            shooted = false;
         }
-    }
-
-    void swapFire() {
-        shooted = !shooted;
     }
 }

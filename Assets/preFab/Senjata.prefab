@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7513662894830086283}
   - component: {fileID: 7513662894830086276}
   - component: {fileID: 7513662894830086277}
-  - component: {fileID: 7513662894830086278}
   m_Layer: 0
   m_Name: Senjata
   m_TagString: Untagged
@@ -68,18 +67,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sendalSpeed: 30
---- !u!114 &7513662894830086278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7513662894830086282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4b9897abb0e7d46bd667e458b69ab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   aliveTime: 1
 --- !u!1 &7513662894966758659
 GameObject:
