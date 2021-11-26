@@ -35,6 +35,10 @@ public class sendalController : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Object")) {
             removeForce();
             Destroy(gameObject);
+            if(other.tag == "Enemy") {
+                enemyHealth hurtEnemy = other.gameObject.GetComponent<enemyHealth>();
+                hurtEnemy.addDamage(weaponDamage);
+            }
         }
     }
 }

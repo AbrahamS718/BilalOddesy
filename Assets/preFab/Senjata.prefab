@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sendalSpeed: 30
   aliveTime: 1
+  weaponDamage: 10
 --- !u!1 &7513662894966758659
 GameObject:
   m_ObjectHideFlags: 0
