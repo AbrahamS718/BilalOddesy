@@ -68,11 +68,11 @@ public class bilalController : MonoBehaviour
         //player shooting
         if(Input.GetAxisRaw("Fire1")>0) {
             fireSandal();
-            //swapFire(); //turn on off animation
-            //myAnim.SetBool("isShoted",shooted); //Player shooting animation
+            swapFire(); //turn on off animation
+            myAnim.SetBool("isShoted",shooted); //Player shooting animation
         }else if(Input.GetAxisRaw("Fire1")<0) {
-            //swapFire(); //turn on off animation
-            //myAnim.SetBool("isShoted",shooted); //Player shooting animation
+            swapFire(); //turn on off animation
+            myAnim.SetBool("isShoted",shooted); //Player shooting animation
         }
     }
 
