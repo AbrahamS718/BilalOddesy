@@ -90,7 +90,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4783491192459309175}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.1, y: -9.8, z: 29.52521}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
@@ -265,5 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89fa0fb7bbb0ba4f9780e4f90ab2d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHealth: 30
+  fullHealth: 100
   deathFX: {fileID: 1615861483172553696, guid: aaadde1569769ef4ca67861c56f39a93, type: 3}
+  healthSlider: {fileID: 0}
