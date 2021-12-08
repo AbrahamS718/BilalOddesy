@@ -8,9 +8,10 @@ public class cameraFollowCharacter : MonoBehaviour
     public float smoothing; //dampening effect
     public Vector3 offset;
 
+    public float minX;
+    public float maxX;
     float lowY;
     float highY;
-    float minX;
 
     // Start is called before the first frame update
     void Start() {
@@ -26,14 +27,14 @@ public class cameraFollowCharacter : MonoBehaviour
         Vector3 smoothPos = Vector3.Lerp(transform.position, targetCamPos, smoothing*Time.fixedDeltaTime);
         transform.position = smoothPos;
 
-        if(transform.position.y < lowY) {
+        if(transform.position.x < minX) {
+            transform.position = new Vector3 (minX, lowY, transform.position.z);
+        }else if(transform.position.x > maxX) {
+            transform.position = new Vector3 (maxX, lowY, transform.position.z);
+        }else if(transform.position.y < lowY) {
             transform.position = new Vector3 (transform.position.x, lowY, transform.position.z);
         }else if(transform.position.y > highY) {
             transform.position = new Vector3 (transform.position.x, highY, transform.position.z);
-        }else if(transform.position.x < -19) {
-            transform.position = new Vector3 (-19, lowY, transform.position.z);
-        }else if(transform.position.x > 231) {
-            transform.position = new Vector3 (231, lowY, transform.position.z);
         }
     }
 }
