@@ -2470,6 +2470,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2145274588}
     m_Modifications:
+    - target: {fileID: 7156755920965298349, guid: cd79a74455ccfe3448e7171a77d15dca, type: 3}
+      propertyPath: m_Size.x
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7156755920965298350, guid: cd79a74455ccfe3448e7171a77d15dca, type: 3}
       propertyPath: m_Name
       value: goblin_lv1

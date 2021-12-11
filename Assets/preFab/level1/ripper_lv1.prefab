@@ -79,7 +79,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40, y: 8}
+  m_Size: {x: 45, y: 10}
   m_EdgeRadius: 0
 --- !u!114 &5504105904793342671
 MonoBehaviour:
@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d56ae4345e8f2c42afe506381a03d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 10
+  enemySpeed: 12.5
   enemyGraphic: {fileID: 5504105905401344651}
-  chargeTime: 0.5
+  chargeTime: 0.75
 --- !u!1 &5504105905401344651
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,9 +108,9 @@ GameObject:
   - component: {fileID: 5504105905401344649}
   - component: {fileID: 5504105905401344653}
   - component: {fileID: 5504105905401344654}
-  - component: {fileID: 5504105905401344655}
-  - component: {fileID: 5504105905401344648}
   - component: {fileID: 5504105905401344652}
+  - component: {fileID: 5504105905401344648}
+  - component: {fileID: 5504105905401344655}
   m_Layer: 7
   m_Name: ripper_AI_lv1
   m_TagString: Enemy
@@ -226,36 +226,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -2.72}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &5504105905401344655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5504105905401344651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04bf5a917d804bf49a326f080840e240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMaxHealth: 30
-  enemyDeathFX: {fileID: 1615861483172553696, guid: aaadde1569769ef4ca67861c56f39a93, type: 3}
-  enemySlider: {fileID: 6668169866772526065}
---- !u!114 &5504105905401344648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5504105905401344651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75126dfc63a5ccf4289c40dcfc208e4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  damageRate: 1
-  pushBackForce: 20
 --- !u!95 &5504105905401344652
 Animator:
   serializedVersion: 3
@@ -275,6 +245,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5504105905401344648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5504105905401344651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75126dfc63a5ccf4289c40dcfc208e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  damageRate: 0.75
+  pushBackForce: 20
+--- !u!114 &5504105905401344655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5504105905401344651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04bf5a917d804bf49a326f080840e240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMaxHealth: 30
+  enemyDeathFX: {fileID: 1615861483172553696, guid: aaadde1569769ef4ca67861c56f39a93, type: 3}
+  enemySlider: {fileID: 6668169866772526065}
 --- !u!1001 &5504105906147864636
 PrefabInstance:
   m_ObjectHideFlags: 0

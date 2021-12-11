@@ -1170,7 +1170,7 @@ PrefabInstance:
     - target: {fileID: 4783491192459309182, guid: 8f7005fb1d4d9c147920bc2ba4992da7, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 422382217219617764, guid: 6d8816d14c2271140b8a08a037adf4a4, type: 3}
+      objectReference: {fileID: 5258784985180310294, guid: 5fcc4d19e16d4d147b196e178b7fcf05, type: 3}
     - target: {fileID: 4783491192459309182, guid: 8f7005fb1d4d9c147920bc2ba4992da7, type: 3}
       propertyPath: jumpHeight
       value: 500

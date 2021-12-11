@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75126dfc63a5ccf4289c40dcfc208e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  damageRate: 1
+  damage: 25
+  damageRate: 0.5
   pushBackForce: 30
 --- !u!95 &6497925540743731463
 Animator:
@@ -238,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 8596311435166775512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -170.2, y: -11.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 8596311434652068796}
   m_Father: {fileID: 0}
@@ -289,7 +289,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40, y: 10}
+  m_Size: {x: 50, y: 15}
   m_EdgeRadius: 0
 --- !u!114 &6497925540789101517
 MonoBehaviour:
@@ -303,9 +303,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af9ce31fd5863f46b44721a03ec2216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 13
+  enemySpeed: 15
   enemyGraphic: {fileID: 8596311434652068797}
-  chargeTime: 0.3
+  chargeTime: 0.5
   weaponTip: {fileID: 6497925542205507201}
   bullet: {fileID: 3260772880200692641, guid: 27412070a8adfce4481a782186789d5d, type: 3}
   fireRate: 1

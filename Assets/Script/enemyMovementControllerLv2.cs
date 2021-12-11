@@ -27,9 +27,6 @@ public class enemyMovementControllerLv2 : MonoBehaviour
     public float fireRate;
     float nextFire = 0f;
 
-    //for animation character shooting
-    bool shooted;
-
     // Start is called before the first frame update
     void Start() {
         enemyAnimator = GetComponentInChildren<Animator>();
@@ -64,19 +61,17 @@ public class enemyMovementControllerLv2 : MonoBehaviour
                     enemyRB.AddForce(new Vector2(-1,0)*enemySpeed);
                     if(Time.time > nextFire) {
                         nextFire = Time.time+fireRate;
-                        shooted = true;
                         Instantiate(bullet, weaponTip.position, Quaternion.Euler (new Vector3 (0,0,180f)));
                     }else{
-                        shooted = false;
+                        
                     }
                 }else {
                     enemyRB.AddForce(new Vector2(1,0)*enemySpeed);
                     if(Time.time > nextFire) {
                         nextFire = Time.time+fireRate;
-                        shooted = true;
                         Instantiate(bullet, weaponTip.position, Quaternion.Euler (new Vector3 (0,0,0)));
                     }else{
-                        shooted = false;
+                        
                     }
                 }
                 enemyAnimator.SetBool("isCharging", charging);

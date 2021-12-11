@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bf5a917d804bf49a326f080840e240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaxHealth: 50
+  enemyMaxHealth: 40
   enemyDeathFX: {fileID: 1615861483172553696, guid: aaadde1569769ef4ca67861c56f39a93, type: 3}
   enemySlider: {fileID: 2632097279361487001}
 --- !u!114 &3778393116348988376
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  damageRate: 1
+  damageRate: 0.5
   pushBackForce: 30
 --- !u!1 &3778393116846712995
 GameObject:
@@ -258,7 +258,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40, y: 10}
+  m_Size: {x: 50, y: 15}
   m_EdgeRadius: 0
 --- !u!114 &3778393116846712993
 MonoBehaviour:
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 15
   enemyGraphic: {fileID: 3778393116348988358}
-  chargeTime: 0.3
+  chargeTime: 0.5
 --- !u!1001 &3778393117300822868
 PrefabInstance:
   m_ObjectHideFlags: 0
