@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class bilalHealth : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class bilalHealth : MonoBehaviour
 
     //Health variabel
     public Slider healthSlider;
+
+    //Panel Your Lose
+    public GameObject loseUI;
 
     // Start is called before the first frame update
     void Start() {
@@ -44,6 +48,12 @@ public class bilalHealth : MonoBehaviour
     public void makeDead() {
         transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z-3);
         Instantiate(deathFX, transform.position, transform.rotation);
-        Destroy(gameObject);
+        StartCoroutine(transitionDeath());
+    }
+
+    IEnumerator transitionDeath() {
+        yield return new WaitForSeconds(2);
+        loseUI.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

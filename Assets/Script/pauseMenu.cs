@@ -40,4 +40,8 @@ public class pauseMenu : MonoBehaviour
         Debug.Log("Quitting Game...");
         Application.Quit();
     }
+
+    public void resetGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
