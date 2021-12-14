@@ -90,6 +90,7 @@ public class bilalController : MonoBehaviour
             }else if(!facingRight) {
                 Instantiate(bullet, sandalTip.position, Quaternion.Euler (new Vector3 (0,0,180f)));
             }
+            audioScript.PlaySound("shoot");
         }else{
             shooted = false;
         }

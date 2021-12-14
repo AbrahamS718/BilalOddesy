@@ -19,6 +19,9 @@ public class bilalHealth : MonoBehaviour
     //Panel Your Lose
     public GameObject loseUI;
 
+    //Audio Lose
+    //AudioSource loseAudio;
+
     // Start is called before the first frame update
     void Start() {
         currentHealth = fullHealth;
@@ -28,6 +31,8 @@ public class bilalHealth : MonoBehaviour
         //HUD intialization
         healthSlider.maxValue=fullHealth;
         healthSlider.value=fullHealth;
+
+        //loseAudio = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,6 +59,8 @@ public class bilalHealth : MonoBehaviour
     IEnumerator transitionDeath() {
         yield return new WaitForSeconds(2);
         loseUI.SetActive(true);
+        audioScript.PlaySound("lose");
+        //loseAudio.Play();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

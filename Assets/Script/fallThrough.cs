@@ -8,10 +8,4 @@ public class fallThrough : MonoBehaviour
     void Start() {
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Object"), LayerMask.NameToLayer("Object"));
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
